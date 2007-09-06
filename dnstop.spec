@@ -1,15 +1,11 @@
-%define	name	dnstop
-%define version 20060424
-%define release %mkrel 1
-
 Summary:	This displays various tables of DNS traffic on your network
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		dnstop
+Version:	20070510
+Release:	%mkrel 1
 License:	BSD
 Group:		Monitoring
 URL:		http://dnstop.measurement-factory.com/
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	http://dns.measurement-factory.com/tools/dnstop/src/%{name}-%{version}.tar.gz
 BuildRequires:	libpcap-devel >= 0.7
 BuildRequires:	ncurses-devel
 BuildRoot:	%{_tmppath}/%{name}-buildroot
@@ -25,7 +21,7 @@ domains and second level domains.
 %setup -q -n %{name}-%{version}
 
 %build
-%make CFLAGS="%{optflags}"
+%make CFLAGS="%{optflags} -DUSE_IPV6=1 -DUSE_PPP=0"
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
@@ -40,8 +36,6 @@ install -m644 dnstop.8 %{buildroot}%{_mandir}/man8/
 
 %files
 %defattr(-,root,root)
-%doc LICENSE
+%doc CHANGES LICENSE
 %attr(0755,root,root) %{_sbindir}/dnstop
 %attr(0644,root,root) %{_mandir}/man8/dnstop.8*
-
-
