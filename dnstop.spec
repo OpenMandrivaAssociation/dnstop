@@ -8,6 +8,7 @@ URL:		http://dnstop.measurement-factory.com/
 Source0:	http://dns.measurement-factory.com/tools/dnstop/src/%{name}-%{version}.tar.gz
 BuildRequires:	libpcap-devel >= 0.7
 BuildRequires:	ncurses-devel
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 dnstop is a libpcap application (ala tcpdump) that displays
