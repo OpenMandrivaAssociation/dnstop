@@ -1,7 +1,7 @@
 Summary:	This displays various tables of DNS traffic on your network
 Name:		dnstop
 Version:	20070510
-Release:	%mkrel 1
+Release:	%mkrel 3
 License:	BSD
 Group:		Monitoring
 URL:		http://dnstop.measurement-factory.com/
