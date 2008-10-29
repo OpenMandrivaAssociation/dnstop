@@ -1,14 +1,14 @@
 Summary:	This displays various tables of DNS traffic on your network
 Name:		dnstop
 Version:	20070510
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	BSD
 Group:		Monitoring
 URL:		http://dnstop.measurement-factory.com/
 Source0:	http://dns.measurement-factory.com/tools/dnstop/src/%{name}-%{version}.tar.gz
 BuildRequires:	libpcap-devel >= 0.7
 BuildRequires:	ncurses-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 dnstop is a libpcap application (ala tcpdump) that displays
