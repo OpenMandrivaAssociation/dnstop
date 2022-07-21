@@ -1,7 +1,7 @@
 Summary:	This displays various tables of DNS traffic on your network
 Name:		dnstop
-Version:	20121017
-Release:	2
+Version:	20140915
+Release:	1
 License:	BSD
 Group:		Monitoring
 URL:		http://dnstop.measurement-factory.com/
