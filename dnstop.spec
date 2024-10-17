@@ -4,7 +4,7 @@ Version:	20140915
 Release:	1
 License:	BSD
 Group:		Monitoring
-URL:		http://dnstop.measurement-factory.com/
+URL:		https://dnstop.measurement-factory.com/
 Source0:	http://dns.measurement-factory.com/tools/dnstop/src/%{name}-%{version}.tar.gz
 BuildRequires:	libpcap-devel >= 0.7
 BuildRequires:	pkgconfig(ncurses)
